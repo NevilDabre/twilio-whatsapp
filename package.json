@@ -1,0 +1,20 @@
+{
+  "name": "twilio-whatsapp",
+  "version": "1.0.0",
+  "description": "twilio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node .",
+    "start": "NODE_ENV=production node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "twilio": "^3.56.0"
+  }
+}
