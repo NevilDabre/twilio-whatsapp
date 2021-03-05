@@ -61,6 +61,7 @@ const getRatesUsingApi = () => {
 const buildCountryRateMessage = (requestMessage) => {
     const requestCurrencyCode = indiaArguments.indexOf(requestMessage) > -1 ? 'INR' : philippinesArguments.indexOf(requestMessage) > -1 ? 'PHP' : sriLankaArguments.indexOf(requestMessage) > -1 ? 'LKR' : 'NA'
     return getRatesUsingApi().then(rates => {
+        console.log('rates', rates.length)
         if (rates && rates.length) {
             const requestCurrencyResult = _.find(rates, { currency_code: requestCurrencyCode });
             if (requestCurrencyResult) {
@@ -90,6 +91,8 @@ const processAndSendReply = async (req, res, next) => {
         let message = welcomeMessage;
         const _args = req.body;
         const requestMessage = _args.Body.toLowerCase().split(' ').join('_')
+        console.log('requestMessage', requestMessage, _args);
+        console.log('_args ', _args);
 
         if (_args && _args.Body && apiArguments.indexOf(requestMessage) > -1) {
             //Fetch from API

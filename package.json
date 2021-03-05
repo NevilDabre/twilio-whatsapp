@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "build": "babel src -d dist/",
-    "start_old": "NODE_ENV=production npm run build && node dist",
-    "start": "node ./src",
+    "start": "NODE_ENV=production npm run build && node dist",
+    "start_test": "node ./src",
     "restart": "rimraf dist && npm run start",
     "dev": "nodemon"
   },
