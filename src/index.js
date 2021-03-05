@@ -3,7 +3,7 @@ const express = require("express")
 const bodyParser = require("body-parser")
 require('dotenv').config()
 
-const { router } = require('./src/routes')
+const { router } = require('./routes')
 // Initialize express and define a port
 const app = express()
 

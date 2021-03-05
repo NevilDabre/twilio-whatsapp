@@ -2,11 +2,12 @@
   "name": "twilio-whatsapp",
   "version": "1.0.0",
   "description": "twilio project",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node .",
-    "start": "NODE_ENV=production node ."
+    "build": "babel src -d dist/",
+    "start": "NODE_ENV=production npm run build && node dist",
+    "restart": "rimraf dist && npm run start",
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,14 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
+    "rimraf": "^3.0.2",
     "twilio": "^3.56.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "nodemon": "^2.0.7"
   }
 }
