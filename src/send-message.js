@@ -1,4 +1,4 @@
-const http = require('http');
+const https = require('https');
 const _ = require('lodash')
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -20,7 +20,7 @@ const sriLankaArguments = ['2', 'lk', 'lkr', 'sri_lanka']
 
 const getRatesUsingApi = () => {
     return new Promise((resolve, reject) => {
-        http.get(apiUrl, (resp) => {
+        https.get(apiUrl, (resp) => {
             let data = '';
 
             // A chunk of data has been received.
