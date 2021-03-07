@@ -66,7 +66,7 @@ const buildCountryRateMessage = (requestMessage) => {
             const requestCurrencyResult = _.find(rates, { currency_code: requestCurrencyCode });
             if (requestCurrencyResult) {
                 const { country_name, currency_name, rate } = requestCurrencyResult;
-                return `Remitbee's current rate to ${country_name} is ${currency_name}: ${rate}, please note our rates are subject to change anytime. FREE service fee when sending amount more than $500.00. Please visit https://www.remitbee.com for signup.`
+                return `Remitbee's current rate to ${country_name} is ${rate} ${currency_name}s, please note our rates are subject to change anytime. FREE service fee when sending amount more than $500.00. Please visit https://www.remitbee.com for signup.`
             }
         }
         return welcomeMessage;
