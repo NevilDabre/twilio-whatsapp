@@ -13,7 +13,7 @@ const welcomeMessage = `Hi welcome to Remitbee customer support. Choose below op
 27) Qatar 28) China`
 */
 
-const apiArguments = ['1', '2', '3', 'in', 'lk', 'ph', 'india', 'philippines', 'sri_lanka']
+const apiArguments = ['1', '2', '3', 'in', 'lk', 'ph', 'india', 'philippines', 'sri_lanka', 'inr', 'php', 'lkr']
 const indiaArguments = ['1', 'in', 'inr', 'india'];
 const philippinesArguments = ['3', 'ph', 'php', 'philippines'];
 const sriLankaArguments = ['2', 'lk', 'lkr', 'sri_lanka']
@@ -90,7 +90,7 @@ const processAndSendReply = async (req, res, next) => {
     if (req.body) {
         let message = welcomeMessage;
         const _args = req.body;
-        const requestMessage = _args.Body.toLowerCase().split(' ').join('_')
+        const requestMessage = _args && _args.Body && String(_args.Body).toLowerCase().split(' ').join('_')
         console.log('requestMessage', requestMessage, _args);
         console.log('_args ', _args);
 
