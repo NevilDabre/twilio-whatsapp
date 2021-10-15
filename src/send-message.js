@@ -19,7 +19,7 @@ const currencyWithIntents = [{
     intents: ['1', 'in', 'inr', 'india']
 },{
     currency_name: 'LKR',
-    intents: ['2', 'lk', 'lkr', 'sri_lanka']
+    intents: ['2', 'lk', 'lkr', 'sri_lanka', 'srilanka', 'Sri Lanka', 'Ceylon', 'Jaffna', 'Colombo', 'vavuniya', 'Sri Lanka rate', 'srilankarate', 'CMB', 'all', 'SLR', 'SL rupee']
 },{
     currency_name: 'PHP',
     intents: ['3', 'ph', 'php', 'philippines']
