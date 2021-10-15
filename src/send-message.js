@@ -12,29 +12,29 @@ const welcomeMessage = `Hi welcome to Remitbee customer support. Choose below op
 
 
 
-const apiArguments = ['1', 'in', 'inr', 'india', '2', 'lk', 'lkr', 'sri_lanka', 'srilanka', 'sri lanka', 'ceylon', 'jaffna', 'colombo', 'vavuniya', 'sri lanka rate', 'srilankarate', 'slr', 'sl rupee', '3', 'ph', 'php', 'philippines', '4', 'eur', 'euro', 'europe', 'France', 'Germany', 'Spain', 'Netherlands', 'Luxembourg','Andorra','Belgium', 'Austria', 'Cyprus', 'Estonia', 'Finland', 'Greece', 'Ireland', 'Italy', 'Malta', 'Monaco', 'Montenegro', 'Portugal', 'San Marino', 'Slovakia', 'Slovenia', '5', 'usd', 'us', 'usa', 'united_states', '6', 'pound', 'pound sterling', 'uk', 'united_kingdom', '7', 'swiss', 'Switzerland', 'chf', '8', 'aud', 'aus', 'australia', 'australian dollar', 'aud', '9', 'singapore', 'sgd', 'sgd', '10', 'malaysia', 'Malaysian Ringgit', 'Ringgit', 'myr', '11', 'norway', 'Norwegian Krone', 'Norwegian', 'nok', '12', 'czech', 'Czech Koruna', 'koruna', 'czk', '13', 'denmark', 'Danish Krone', 'danish', 'dkk','14', 'Hungary', 'forint', 'huf','15', 'Poland', 'Polish Zloty', 'Zloty', 'pln','16', 'sweden', 'Swedish Krona', 'swedish', 'sek','17', 'nzd', 'new_zealand', 'newzealand', 'nzd','18', 'uae', 'dubai', 'dirham', 'aed','19', 'hong_kong', 'hkd','20', 'japan', 'japanese_yen', 'yen', 'jpy', '21', 'mexican_peso', 'mexico', 'mxn', '22', 'Saudi_Arabia', 'saudi', 'riyal', 'sar', '23', 'south_africa', 'south african rand', 'rand', 'zar', '24', 'thailand', 'thai_baht', 'thb', '25', 'turkey', 'turkish_lira', 'turkish', 'try', '26', 'qatar', 'qatari_rial', 'qar']
+const apiArguments = ['1', 'in', 'inr', 'india', '2', 'lk', 'lkr', 'sri_lanka', 'srilanka', 'sri_lanka', 'ceylon', 'jaffna', 'colombo', 'vavuniya', 'sri_lanka_rate', 'srilankarate', 'slr', 'sl_rupee', '3', 'ph', 'php', 'philippines', '4', 'eur', 'euro', 'europe', 'france', 'germany', 'spain', 'netherlands', 'luxembourg','andorra','belgium', 'austria', 'cyprus', 'estonia', 'finland', 'greece', 'ireland', 'italy', 'malta', 'monaco', 'montenegro', 'portugal', 'san_marino', 'slovakia', 'slovenia', '5', 'usd', 'us', 'usa', 'united_states', '6', 'pound', 'pound_sterling','poundsterling', 'uk', 'united_kingdom', '7', 'swiss', 'switzerland', 'chf', '8', 'aud', 'aus', 'australia', 'australian_dollar', 'aud', '9', 'singapore', 'sgd', 'sgd', '10', 'malaysia', 'malaysian_ringgit', 'ringgit', 'myr', '11', 'norway', 'norwegian_krone', 'krone', 'norwegian', 'nok', '12', 'czech', 'czech_koruna', 'koruna', 'czk', '13', 'denmark', 'danish_krone', 'danish', 'dkk','14', 'hungary', 'forint', 'huf','15', 'poland', 'polish_zloty', 'zloty', 'pln','16', 'sweden', 'swedish_krona', 'swedish', 'sek','17', 'nzd', 'new_zealand', 'newzealand', 'nzd','18', 'uae', 'dubai', 'dirham', 'aed','19', 'hong_kong', 'hkd','20', 'japan', 'japanese_yen', 'yen', 'jpy', '21', 'mexican_peso', 'mexico', 'mxn', '22', 'saudi_Arabia', 'saudi', 'riyal', 'sar', '23', 'south_africa', 'south_african_rand', 'rand', 'zar', '24', 'thailand', 'thai_baht', 'thb', '25', 'turkey', 'turkish_lira', 'turkish', 'try', '26', 'qatar', 'qatari_rial', 'qar']
 
 const currencyWithIntents = [{
     currency_name: 'INR',
     intents: ['1', 'in', 'inr', 'india']
 },{
     currency_name: 'LKR',
-    intents: ['2', 'lk', 'lkr', 'sri_lanka', 'srilanka', 'Sri Lanka', 'Ceylon', 'Jaffna', 'Colombo', 'vavuniya', 'Sri Lanka rate', 'srilankarate', 'CMB', 'all', 'SLR', 'SL rupee']
+    intents: ['2', 'lk', 'lkr', 'sri_lanka', 'srilanka', 'sri_lanka', 'ceylon', 'jaffna', 'colombo', 'vavuniya', 'sri_lanka_rate', 'srilankarate', 'slr', 'sl_rupee']
 },{
     currency_name: 'PHP',
     intents: ['3', 'ph', 'php', 'philippines']
 },{
     currency_name: 'EUR',
-    intents: ['4', 'eur', 'euro', 'europe', 'France', 'Germany', 'Spain', 'Netherlands', 'Luxembourg','Andorra','Belgium', 'Austria', 'Cyprus', 'Estonia', 'Finland', 'Greece', 'Ireland', 'Italy', 'Malta', 'Monaco', 'Montenegro', 'Portugal', 'San Marino', 'Slovakia', 'Slovenia']
+    intents: ['4', 'eur', 'euro', 'europe', 'france', 'germany', 'spain', 'netherlands', 'luxembourg','andorra','belgium', 'austria', 'cyprus', 'estonia', 'finland', 'greece', 'ireland', 'italy', 'malta', 'monaco', 'montenegro', 'portugal', 'san_marino', 'slovakia', 'slovenia']
 },{
     currency_name: 'USD',
     intents: ['5', 'usd', 'us', 'usa', 'united_states']
 },{
     currency_name: 'GBP',
-    intents: ['6', 'pound', 'pound sterling', 'uk', 'united_kingdom', 'gbp']
+    intents: ['6', 'pound', 'pound_sterling', 'poundsterling', 'uk', 'united_kingdom', 'gbp']
 },{
     currency_name: 'CHF',
-    intents: ['7', 'swiss', 'Switzerland', 'chf']
+    intents: ['7', 'swiss', 'switzerland', 'chf']
 },{
     currency_name: 'AUD',
     intents: ['8', 'aud', 'aus', 'australia', 'australian dollar', 'aud']
@@ -43,25 +43,25 @@ const currencyWithIntents = [{
     intents: ['9', 'singapore', 'sgd', 'sgd']
 },{
     currency_name: 'MYR',
-    intents: ['10', 'malaysia', 'Malaysian Ringgit', 'Ringgit', 'myr']
+    intents: ['10', 'malaysia', 'malaysian_ringgit', 'ringgit', 'myr']
 },{
     currency_name: 'NOK',
-    intents: ['11', 'norway', 'Norwegian Krone', 'Norwegian', 'nok']
+    intents: ['11', 'norway', 'norwegian_krone', 'norwegian', 'nok']
 },{
     currency_name: 'CZK',
-    intents: ['12', 'czech', 'Czech Koruna', 'koruna', 'czk']
+    intents: ['12', 'czech', 'czech_koruna', 'koruna', 'czk']
 },{
     currency_name: 'DKK',
-    intents: ['13', 'denmark', 'Danish Krone', 'danish', 'dkk']
+    intents: ['13', 'denmark', 'danish_krone', 'danish', 'dkk']
 },{
     currency_name: 'HUF',
-    intents: ['14', 'Hungary', 'forint', 'huf']
+    intents: ['14', 'hungary', 'forint', 'huf']
 },{
     currency_name: 'PLN',
-    intents: ['15', 'Poland', 'Polish Zloty', 'Zloty', 'pln']
+    intents: ['15', 'poland', 'polish_zloty', 'zloty', 'pln']
 },{
     currency_name: 'SEK',
-    intents: ['16', 'sweden', 'Swedish Krona', 'swedish', 'sek']
+    intents: ['16', 'sweden', 'swedish_krona', 'swedish', 'sek']
 },{
     currency_name: 'NZD',
     intents: ['17', 'nzd', 'new_zealand', 'newzealand', 'nzd']
@@ -79,11 +79,11 @@ const currencyWithIntents = [{
     intents: ['21', 'mexican_peso', 'mexico', 'mxn']
 },{
     currency_name: 'SAR',
-    intents: ['22', 'Saudi_Arabia', 'saudi', 'riyal', 'sar']
+    intents: ['22', 'saudi_Arabia', 'saudi', 'riyal', 'sar']
 },
 {
     currency_name: 'ZAR',
-    intents: ['23', 'south_africa', 'south african rand', 'rand', 'zar']
+    intents: ['23', 'south_africa', 'south_african_rand', 'rand', 'zar']
 },
 {
     currency_name: 'THB',
@@ -99,7 +99,7 @@ const currencyWithIntents = [{
 },
 {
     currency_name: 'CNY',
-    intents: ['27', 'china', 'Yuan Renminbi', 'chinese', 'yuan', 'renminbi', 'cny']
+    intents: ['27', 'china', 'yuan_renminbi', 'chinese', 'yuan', 'renminbi', 'cny']
 },
 {
     currency_name: 'PKR',
@@ -193,12 +193,12 @@ const getRatesUsingApi = () => {
 
 const buildCountryRateMessage = (requestMessage) => {
     const requestCurrencyCode = currencyWithIntents.filter(currencyIntent=>{
-        console.log('currencyIntent ', currencyIntent);
         return currencyIntent.intents.indexOf(requestMessage) >-1
     });
     return getRatesUsingApi().then(rates => {
         if (rates && rates.length) {
             const requestCurrencyResult = _.find(rates, { currency_code: requestCurrencyCode && requestCurrencyCode.length && requestCurrencyCode[0].currency_name  });
+            console.log('requestCurrencyResult ', requestCurrencyResult)
             if (requestCurrencyResult) {
                 const { country_name, currency_name, rate } = requestCurrencyResult;
                 return `Remitbee's current rate to ${country_name} is ${rate} ${currency_name}s, please note our rates are subject to change anytime. FREE service fee when sending amount more than $500.00. Please visit https://www.remitbee.com for signup.`
